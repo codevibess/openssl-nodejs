@@ -1,6 +1,6 @@
 {
   "name": "openssl-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,29 @@
     "type": "git",
     "url": "https://github.com/codevibess/openssl-nodejs"
   },
-  "keywords": ["openssl", "ssl", "certificate", "rsa", "encrypt", "decrypt", "verify", "public key", "private key", "sign", "openssl nodejs", "node openssl", "nodejs openssl", "key generation", "config", "crs", "x509", "pkcs12", "pkcs10", "ssl", "tls"],
+  "keywords": [
+    "openssl",
+    "ssl",
+    "certificate",
+    "rsa",
+    "encrypt",
+    "decrypt",
+    "verify",
+    "public key",
+    "private key",
+    "sign",
+    "openssl nodejs",
+    "node openssl",
+    "nodejs openssl",
+    "key generation",
+    "config",
+    "crs",
+    "x509",
+    "pkcs12",
+    "pkcs10",
+    "ssl",
+    "tls"
+  ],
   "author": "codevibess",
   "license": "MIT"
 }
