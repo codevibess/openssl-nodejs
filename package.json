@@ -1,21 +1,16 @@
 {
-  "name": "node-openssl",
+  "name": "openssl-nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "openssl-wrapper": "^0.3.4"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codevibess/openssl-nodejs"
   },
-  "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0"
-  }
+  "keywords": ["openssl", "ssl", "certificate", "rsa", "encrypt", "decrypt", "verify", "public key", "private key", "sign", "openssl nodejs", "node openssl", "nodejs openssl", "key generation", "config", "crs", "x509", "pkcs12", "pkcs10", "ssl", "tls"],
+  "author": "codevibess",
+  "license": "MIT"
 }
