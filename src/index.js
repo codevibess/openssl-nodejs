@@ -15,8 +15,7 @@ const checkIfParamsArrayIsEmpty = params => Boolean(params.length)
 const checkBufferObject = element => element instanceof Object && element.name && Buffer.isBuffer(element.buffer)
 
 const checkCommandForIO = element => element.includes('-in') || element.includes('-out')
-    || element.includes('-keyout') || element.includes('-signkey')
-    || element.includes('-config') || element.includes('-key')
+    || element.includes('-keyout') || element.includes('-signkey') || element.includes('-key')
 
 const checkDataTypeCompatibility = (params) => {
     const allowedParamsDataTypes = ['string', 'object']
