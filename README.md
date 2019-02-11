@@ -41,9 +41,9 @@ console.log(err.toString(), buffer.toString());
 ```
 
 When you used a command which generates additional output in file format this package will create a folder openssl/ in the directory where the command was invoked. All output files will appear in this folder (openssl).
----
 
-> Note: If u want to use a command which needs additional interaction use parameter -config and specify pass to file with configuration.
+Note: 
+> If u want to use a command which needs additional interaction use parameter -config and specify pass to file with configuration.
 ---
 That's all that you need to start using it.
 
