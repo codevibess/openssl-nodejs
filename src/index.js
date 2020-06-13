@@ -28,7 +28,7 @@ const checkDataTypeCompatibility = (params) => {
 module.exports = function openssl(params, callback = () => undefined) {
     const stdout = [];
     const stderr = [];
-    const dir = os.tmpdir()+path.sep+'openssl'+path.sep;
+    const dir = path.join(os.tmpdir(), 'openssl');
     let parameters = params
 
 
@@ -56,7 +56,7 @@ module.exports = function openssl(params, callback = () => undefined) {
                 fs.mkdirSync(dir);
             }
 
-            const filename = dir + parameters[i].name
+            const filename =path.join(dir, parameters[i].name)
 
             fs.writeFileSync(filename, parameters[i].buffer, (err) => {
                 if (err) {
@@ -65,11 +65,11 @@ module.exports = function openssl(params, callback = () => undefined) {
             });
 
             parameters[i] = parameters[i].name
-            parameters[i] = dir + parameters[i];            
+            parameters[i] = path.join(dir, parameters[i]);            
         }
 
         if (checkCommandForIO(parameters[i]) && typeof parameters[i + 1] !== 'object') {
-            parameters[i + 1] = dir + parameters[i + 1];
+            parameters[i + 1] = path.join(dir, parameters[i + 1]);
         }
     }
 
