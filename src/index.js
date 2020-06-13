@@ -3,6 +3,8 @@
 /* eslint-disable no-console */
 /* eslint indent: "error" */
 const fs = require('fs');
+const os = require('os');
+const path = require('path');
 const { spawn } = require('child_process');
 
 
@@ -26,7 +28,7 @@ const checkDataTypeCompatibility = (params) => {
 module.exports = function openssl(params, callback = () => undefined) {
     const stdout = [];
     const stderr = [];
-    const dir = 'openssl/';
+    const dir = os.tmpdir()+path.sep+'openssl'+path.sep;
     let parameters = params
 
 
