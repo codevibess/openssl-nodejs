@@ -73,7 +73,6 @@ module.exports = function openssl(params, callback = () => undefined) {
         }
     }
 
-    console.log('Opens SSL params:',parameters);
     const openSSLProcess = spawn('openssl', parameters);
 
     openSSLProcess.stdout.on('data', (data) => {
