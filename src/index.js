@@ -23,10 +23,15 @@ const checkDataTypeCompatibility = (params) => {
 }
 
 
-module.exports = function openssl(params, callback = () => undefined) {
+module.exports = function openssl(params, outdir, callback = () => undefined) {
     const stdout = [];
     const stderr = [];
-    const dir = 'openssl/';
+    let dir = 'openssl/';
+    if(typeof outdir == 'function'){
+      callback = outdir;
+    } else {
+      dir = outdir;
+    }
     let parameters = params
 
 
