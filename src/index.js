@@ -22,6 +22,8 @@ const checkDataTypeCompatibility = (params) => {
     return allowedParamsDataTypes.includes(typeof params)
 }
 
+const checkIfAbsolutePath = path => path.startsWith('/') || path.startsWith('~/');
+
 
 module.exports = function openssl(params, callback = () => undefined) {
     const stdout = [];
@@ -66,7 +68,7 @@ module.exports = function openssl(params, callback = () => undefined) {
             parameters[i] = dir + parameters[i];            
         }
 
-        if (checkCommandForIO(parameters[i]) && typeof parameters[i + 1] !== 'object') {
+        if (checkCommandForIO(parameters[i]) && typeof parameters[i + 1] !== 'object' && !checkIfAbsolutePath(parameters[i +1])) {
             parameters[i + 1] = dir + parameters[i + 1];
         }
     }
